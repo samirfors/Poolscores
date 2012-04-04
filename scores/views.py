@@ -8,5 +8,5 @@ def index(request):
 
 def detail(request, t_id):
 	#t = get_object_or_404(Tournament, pk=t_id)
-	fixtures = Fixture.objects.all();
+	fixtures = Fixture.objects.filter(tournament_id__exact=t_id)
 	return render_to_response('scores/detail.html', {'fixtures':fixtures})
