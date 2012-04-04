@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^scores/$', 'scores.views.index'),
-	url(r'^scores/(?P<t_id>\d+)/$', 'scores.views.detail'),
+	url(r'^index/$', 'scores.views.index'),
+	url(r'^tournament/(?P<t_id>\d+)/$', 'scores.views.detail'),
     url(r'^admin/', include(admin.site.urls)),
 )

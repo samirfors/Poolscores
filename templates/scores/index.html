@@ -1,7 +1,7 @@
 {% if latest_tournaments %}
     <ul>
     {% for tournament in latest_tournaments %}
-        <li><a href="/scores/{{ tournament.id }}/">{{ tournament.name }}</a> - {{ tournament.date_played }}</li>
+        <li><a href="/tournament/{{ tournament.id }}/">{{ tournament.date_played }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

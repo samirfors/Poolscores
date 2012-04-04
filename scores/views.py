@@ -7,5 +7,6 @@ def index(request):
 	return render_to_response('scores/index.html', {'latest_tournaments':latest_tournaments})
 
 def detail(request, t_id):
-	t = get_object_or_404(Tournament, pk=t_id)
-	return render_to_response('scores/detail.html', {'tournament':t})
+	#t = get_object_or_404(Tournament, pk=t_id)
+	fixtures = Fixture.objects.all();
+	return render_to_response('scores/detail.html', {'fixtures':fixtures})

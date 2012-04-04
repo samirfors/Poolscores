@@ -1,1 +1,11 @@
-{{ tournament }}
+<!-- <h1>{{ tournament }}</h1> -->
+
+{% if fixtures %}
+    <ul>
+    {% for fixture in fixtures %}
+        <li><a href="/tournament/fixture/{{ fixture.id }}/">{{ fixture.player1 }} - {{ fixture.player2 }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No fixtures are available.</p>
+{% endif %}
