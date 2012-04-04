@@ -1,4 +1,4 @@
-from scores.models import Player
+from scores.models import Tournament
 from django.contrib import admin
 
-admin.site.register(Player)
+admin.site.register(Tournament)
