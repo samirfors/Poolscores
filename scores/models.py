@@ -1,6 +1,7 @@
 from django.db import models
 
 class Tournament(models.Model):
+	name = models.CharField(max_length=200)
 	date_played = models.DateTimeField('date played')
 	def __unicode__(self):
 		return u'%s' % (self.date_played)
