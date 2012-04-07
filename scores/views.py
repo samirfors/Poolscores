@@ -4,7 +4,6 @@ from django.http import Http404
 
 def index(request):
 	latest_tournaments = Tournament.objects.all().order_by('-date_played')[:10]
-	#players_list = Player.objects.all()
 	return render_to_response('scores/index.html', {'latest_tournaments':latest_tournaments})
 
 def create(request):
@@ -12,7 +11,6 @@ def create(request):
 	return render_to_response('scores/create.html', {'players_list':players_list})
 
 def detail(request, t_id):
-	#t = get_object_or_404(Tournament, pk=t_id)
 	fixtures = Fixture.objects.filter(tournament_id__exact=t_id)
 	return render_to_response('scores/detail.html', {'fixtures':fixtures})
 
